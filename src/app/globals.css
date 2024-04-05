@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --Mobile: 375px;
+  --Desktop: 1440px;
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --neon-green-opacity: hsla(150, 100%, 66%, 0.5);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+  --Font-size: 28px;
+   
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark-Blue);
+  font-size: var(--Font-size);
+}
+main {
+  background-color: var(--Dark-Grayish-Blue);
+  padding: 15px;
+  border-radius: 15px;
+  max-width: var(--Mobile);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main h1, main p {
+  text-align: center;
+}
+main h1 {
+  color: var(--Neon-Green);
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+
+}
+main p {
+  color: var(--Light-Cyan);
+}
+main button {
+  position: absolute;
+  background-color: var(--Neon-Green);
+  padding: 15px;
+  border-radius: 100%;
+  left: 141px;
+  top: -13px;
+}
+main button:hover {
+    filter: drop-shadow(0 0 20px var(--neon-green-opacity) );
+}
+
+@media only screen and (min-width: 700px) {
+  main {
+    max-width: 450px;
+  }
+
+  main button {
+    position: absolute;
+    background-color: var(--Neon-Green);
+    padding: 15px;
+    border-radius: 100%;
+    left: 179px;
+    top: -13px;
+  }
+}
