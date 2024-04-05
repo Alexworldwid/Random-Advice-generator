@@ -8,6 +8,7 @@ import dice from "../../public/images/icon-dice.svg";
 
 export default function Home() {
   const [jsonData, setJsonData] = useState({});
+  const [loaded, setLoaded] = useState(true); 
 
   const fetchData = async () => {
     try {
@@ -18,6 +19,7 @@ export default function Home() {
       console.error("Error fetching data", error);
     }
   };
+
 
   useEffect(() => {
     fetchData();
@@ -36,7 +38,7 @@ export default function Home() {
   return (
     <main className="">
       <h1>Advice #{adviceId}</h1>
-      <p className="">{`"${advice}"`}</p>
+      <p className={`transition-div  ${loaded ? 'loaded' : ''}`}>{`"${advice}"`}</p>
       <Image className="mb-10 mt-5 md:hidden" src={patternMobile} alt="separator" quality={100} />
       <Image className="mb-10 mt-5 hidden md:block" src={patternDesktop} alt="separator" quality={100} />
       <div className="relative w-full ">

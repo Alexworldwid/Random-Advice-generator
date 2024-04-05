@@ -57,7 +57,10 @@ main button {
 }
 main button:hover {
     filter: drop-shadow(0 0 20px var(--neon-green-opacity) );
+    transform: translateY(0%) rotate(360deg);
+    transition: all 1s;
 }
+
 
 @media only screen and (min-width: 700px) {
   main {
